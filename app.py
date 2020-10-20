@@ -1,5 +1,6 @@
 import numpy as np
-from flask import Flask, request, render_template, redirect
+from flask import Flask, request, jsonify, render_template, redirect, flash
+
 from summarize import generate_summary
 from tax import CanadaTax
 
