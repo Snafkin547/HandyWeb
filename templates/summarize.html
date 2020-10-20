@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+{% extends "base.html" %}
+{% block title %}"Chose from menu"{% endblock %}
+
+{% block content %}
+
+
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Summary</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+</head>
+
+  <script type="text/javascript">
+      function getSelectedValue(){
+          var selectedValue=document.getElementById('numbers_of_lines').text;
+      }
+  </script>
+
+<body style="background-color:powderblue;">
+ <div class="login">
+     <h1>Summarize</h1>
+
+      <!-- Main Input For Receiving Query to our ML -->
+      <form action="{{ url_for('summarize')}}"method="POST">
+        <textarea id="styled" name="message" rows="6" cols="50" placeholder="Enter Your Article Here" required="required" ></textarea>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Summarize</button>
+        <br>
+        <!-- Select # of lines in your summary -->
+        <h4>Select # lines</h4>
+        <select id="numbers_of_lines" type="number" name='numbers_of_lines'>
+          <option value=1>1</option>
+          <option value=2>2</option>
+          <option value=3>3</option>
+          <option value=4>4</option>
+          <option value=5>5</option>
+          <option value=6>6</option>
+        </select>
+      </form>
+   <br>
+   <br>
+   <p style="color:blue">
+   {{TextA}}
+   <br>
+   {% for para in summarized_text %}
+   <p> {{para}}</p>
+   {% endfor %}
+   <br>
+   <br>
+   <p style="color:blue">
+   {{TextB}}
+   </p>
+   <br>
+   {{original_text}}
+</div>
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Summary</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+</head>
+
+<body style="background-color:powderblue;">
+ <div class="login">
+     <h1>Compute Tax</h1>
+      <form action="{{ url_for('taxcalc')}}"method="POST">
+        <input type="text" name="income" id="income" placeholder="Input your Salary" required="required">
+        <button type="submit" class="btn btn-primary btn-block btn-large">→</button>
+        <br>
+        <br>
+        <div style='float:left; width:15%'>
+            <p style="color:blue">
+            {{salary}}
+            </p>
+        </div>
+
+        <div style='clear:both'></div>
+        
+        <div style='float:left; width:15%'>
+            <p style="color:blue">
+              {{taxamount}}
+            </p>
+        </div>
+
+      </form>
+</div>
+</body>
+</html>
+
+{% endblock %}
