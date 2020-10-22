@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 
 {% extends "base.html" %}
-{% block title %}Home Page{% endblock %}
 {% block content %}
 
 <html >
 <!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
   <meta charset="UTF-8">
-  <title>Summary</title>
+  <title>CA Tax Calculator(2020)</title>
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 </head>
 
-<body style="background-color:powderblue;">
- <div class="login">
-     <h1>Compute Tax</h1>
-      <form action="{{ url_for('taxcalc')}}"method="POST">
-        <input type="text" name="income" id="income" placeholder="Input your Salary" required="required">
-        <button type="submit" class="btn btn-primary btn-block btn-large">→</button>
+<body>
+ <div class="tax">
+    　<h3>Compute Tax</h3>
+      <br>
+      <form action="{{ url_for('taxcalc')}}" method="POST">
+        <div>
+          <input type="text" name="income" id="income" placeholder="Input your Salary" required="required">
+          <button type="submit" class="btn btn-outline-info btn-sm">Calculate → </button>
+        </div>
         <br>
-        <br>
+
         <div style='float:left; width:15%'>
             <p style="color:blue">
-            {{salary}}
+              <b><u>{{salary}}</b></u>
             </p>
         </div>
-
         <div style='clear:both'></div>
-        
         <div style='float:left; width:15%'>
             <p style="color:blue">
-              {{taxamount}}
+              <b><u>{{taxamount}}</b></u>
             </p>
         </div>
-
       </form>
 </div>
 </body>

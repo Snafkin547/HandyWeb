@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 
 {% extends "base.html" %}
-{% block title %}Home Page{% endblock %}
-
+{% block content %}
 <html >
 <!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
   <meta charset="UTF-8">
-  <title>"Ishii's Website" </title>
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 </head>
+<body>
+<i><h3> Snafkin's Website </h3></i>
+<image src="{{url_for('static', filename='images/snafkin.jpeg')}}"
 
 </body>
 </html>
+{% endblock %}

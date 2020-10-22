@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 
 {% extends "base.html" %}
-{% block title %}"Chose from menu"{% endblock %}
-
 {% block content %}
-
 
 <html >
 <!--From https://codepen.io/frytyler/pen/EGdtg-->
@@ -20,42 +17,42 @@
       }
   </script>
 
-<body style="background-color:powderblue;">
- <div class="login">
-     <h1>Summarize</h1>
-
-      <!-- Main Input For Receiving Query to our ML -->
-      <form action="{{ url_for('summarize')}}"method="POST">
-        <textarea id="styled" name="message" rows="6" cols="50" placeholder="Enter Your Article Here" required="required" ></textarea>
-        <button type="submit" class="btn btn-primary btn-block btn-large">Summarize</button>
+<body>
+  <div class="summary">
+        <h3>Summarize</h3>
         <br>
-        <!-- Select # of lines in your summary -->
-        <h4>Select # lines</h4>
-        <select id="numbers_of_lines" type="number" name='numbers_of_lines'>
-          <option value=1>1</option>
-          <option value=2>2</option>
-          <option value=3>3</option>
-          <option value=4>4</option>
-          <option value=5>5</option>
-          <option value=6>6</option>
-        </select>
-      </form>
-   <br>
-   <br>
-   <p style="color:blue">
-   {{TextA}}
-   <br>
-   {% for para in summarized_text %}
-   <p> {{para}}</p>
-   {% endfor %}
-   <br>
-   <br>
-   <p style="color:blue">
-   {{TextB}}
-   </p>
-   <br>
-   {{original_text}}
-</div>
+        <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('summarize')}}"method="POST">
+          <div>
+            <textarea id="styled" name="message" rows="6" cols="50" placeholder="Enter Your Article Here" required="required" ></textarea>
+          </div>
+          <br>
+          <div style="float: left"> <b><h6> Select # of lines :</h1></b> 
+          </div>
+          <div>
+            <select id="numbers_of_lines" type="number" name='numbers_of_lines'>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+            </select>
+          </div>
+          <div>
+            <button type="submit" class="btn btn-outline-info btn-sm">Summarize</button>
+          </div>
+        </form>
+         <br>
+        <p style="color:dark">
+          <b><u>{{TextA}}</b></u>
+        {% for para in summarized_text %}
+          <p> {{para}}</p>
+        {% endfor %}
+
+        <p style="color:dark"> <b><u>{{TextB}}</b></u> </p>
+        {{original_text}}
+  </div>
 </body>
 </html>
 
