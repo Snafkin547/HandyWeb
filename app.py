@@ -1,6 +1,5 @@
 import numpy as np
 from flask import Flask, request, jsonify, render_template, redirect, flash
-from flask_ngrok import run_with_ngrok
 
 from summarize import generate_summary
 from CAtax import CanadaTax
@@ -8,7 +7,6 @@ from SGtax import SGtax
 
 #Create the flask object
 app = Flask(__name__)
-run_with_ngrok(app)
 
 #create route
 @app.route('/')
