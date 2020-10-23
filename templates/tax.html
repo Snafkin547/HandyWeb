@@ -17,6 +17,12 @@
       <br>
       <form action="{{ url_for('taxcalc')}}" method="POST">
         <div>
+              <select id="country" type="text" name='country'>
+                <option value=Canada>Canada</option>
+                <option value=Singapore>Singapore</option>
+              </select>
+        </div>
+        <div>
           <input type="text" name="income" id="income" placeholder="Input your Salary" required="required">
           <button type="submit" class="btn btn-outline-info btn-sm">Calculate → </button>
         </div>
