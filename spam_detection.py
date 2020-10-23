@@ -6,8 +6,6 @@ from sklearn.metrics import classification_report, accuracy_score
 import pandas as pd
 import sqlite3
 import regex as re
-import matplotlib.pyplot as plt
-from wordcloud import WordCloud
 import pickle
 
 def train_model(email):
