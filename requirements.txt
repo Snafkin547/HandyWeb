@@ -5,4 +5,4 @@ matplotlib>=1.4.3
 Pandas>=0.19
 nltk
 networkx==2.2
-sklearn
+sklearn==0.0
