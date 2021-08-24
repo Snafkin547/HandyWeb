@@ -12,6 +12,6 @@ Therefore, I experimentarily created this platform, learned how-to, and actually
 
 At least that was the the idea behind why I created this.
 
-I used Flask to manage/link python codes with HTTP.
+I used Flask to manage/link python codes with HTML.
 
 
