@@ -1,4 +1,4 @@
-# NLP Web-App
+# NLP WebApp
 
 ### Python-Flask based simple web-app project for the deployment of NLP projects
 ![image](https://user-images.githubusercontent.com/62607343/138568035-c1953a3b-727b-4c0d-b632-40e9c4f16ff5.png)
