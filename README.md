@@ -1,6 +1,6 @@
 # NLP WebApp
 
-### Python-Flask based simple web-app project for the deployment of NLP projects
+### Python-Flask based NLP web-app project
 ![image](https://user-images.githubusercontent.com/62607343/138568035-c1953a3b-727b-4c0d-b632-40e9c4f16ff5.png)
 
 # Spam Email Detection <a href="https://github.com/Snafkin547/MyWebsite-NLP-Flask/blob/main/summarize.py"> Code </a>
