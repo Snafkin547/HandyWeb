@@ -15,5 +15,5 @@
 ![image](https://user-images.githubusercontent.com/62607343/138568171-6aff8988-e6a4-489e-a4f5-5f29be7bcbe7.png)
 
 
-<a href="https://mywebsite-snafkin.herokuapp.com/">link</a>.
+<a href="https://mywebsite-snafkin.herokuapp.com/">Link to the WebApp</a>.
 
